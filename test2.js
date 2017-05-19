@@ -1,3 +1,3 @@
 function foo() {
-    <div>Hello</div>;
+    <div onClick="return false">Hello</div>;
 }
