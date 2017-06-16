@@ -1,5 +1,7 @@
 function foo() {
-    <div>Hello</div>;
+    <div>
+      // comment
+    </div>;
     <div>Hello</div>;
     <div>Hello</div>;
 }
