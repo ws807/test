@@ -7,5 +7,6 @@ var Hello = React.createClass({
   componentDidMount: foo,
   componentWillReceiveProps: foo,
   componentWillUpdate: foo,
-  componentDidUpdate: foo
+  componentDidUpdate: foo,
+  componentWillUnmount: foo
 });
