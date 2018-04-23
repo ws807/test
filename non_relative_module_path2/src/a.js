@@ -7,6 +7,10 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-export function bar(x) {
-  return x.prop;
+// Test case for non-relative module path - local dependency
+
+import {foo} from "my-lib/lib";
+
+function bar() {
+    if (foo() === true) return;
 }

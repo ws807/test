@@ -7,14 +7,10 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-function foo(callback) {
-  return new Array(4).map(_ => callback()) // alarm
-}
+// Test case of non-relative module path - tsconfig.json
 
-function bar(callback) {
-  return Array(3).forEach(_ => callback()) // alarm
-}
+import {foo} from "A";
 
-function indent() {
-  return Array(4).join(" "); // no alarm
+function bar() {
+    if (foo() === true) return;
 }

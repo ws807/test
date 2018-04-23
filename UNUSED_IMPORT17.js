@@ -7,13 +7,14 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Test case for allowing multiple arguments for assert pattern compile of 'invariant' (BD-5369)
+// Testcase for Flow implements clause. (BD-5158)
 
-function test(x) {
-  invariant(x, "error: %s %s", msg1, msg2);
-  if (x) {  // no alarm
-    ret = x.p1;
-  }
-  ret = x.p2;
-  return ret;
+import {
+  I1, // no alarm
+  I2, // no alarm
+  I3, // no alarm
+  I4  // alarm
+} from "foo";
+
+export class A implements I1, I2<I3> {
 }

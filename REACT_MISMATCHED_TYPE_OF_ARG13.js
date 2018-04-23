@@ -7,6 +7,8 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-export function bar(x) {
-  return x.prop;
-}
+import React from 'react';
+
+var obj = {};
+
+React.forwardRef(obj); // alarm

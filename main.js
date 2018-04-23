@@ -7,26 +7,12 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-import { bar } from "./export2";
+// Test case of non-relative module path - webpack configuration
 
-export function foo1(x) {
-  return x.prop;
+var mm = require("s/a");
+
+function main() {
+    if (mm() === true) return;  // alarm
 }
 
-export function foo2(x) {
-  return helper(x);
-}
-
-export function foo3() {
-  return function(x) {
-    return x.prop;
-  }
-}
-
-export function foo4(x) {
-  return bar(x);
-}
-
-function helper(x) {
-  return x.prop;
-}
+module.exports = {};

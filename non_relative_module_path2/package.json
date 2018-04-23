@@ -1,0 +1,6 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "my-lib": "file:./my-lib"
+  }
+}
