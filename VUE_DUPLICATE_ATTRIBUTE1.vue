@@ -1,0 +1,41 @@
+<template>
+<div>
+  AAA
+  <!-- alarm cases -->
+  <ComponentA
+    foo="42"
+    :foo="result"
+  />
+  <ComponentB
+    foo="42"
+    foo="result"
+  />
+  <ComponentC
+    foo="42"
+    :foo="42"
+    v-bind:foo="result"
+  />
+  <div
+    class="a"
+    class="b"
+    style="x"
+    style="y"
+    ></div>
+  <div
+    :class="a"
+    :class="b"
+    :style="x"
+    :style="y"
+    ></div>
+
+  <!-- no alarm cases -->
+  <div
+    class="a"
+    :class="b"
+    style="x"
+    :style="y"
+    ></div>
+</div>
+</template>
+<script>
+</script>
