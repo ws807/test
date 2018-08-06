@@ -7,7 +7,14 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Tests duplicate variables between import and export declarations. (BD-5066)
+// Testcase for alarm filtering on object rest with computed properties. (BD-5624)
 
-import foo from "foo";
-export var foo;
+function test1(obj, prop) {
+  const { [prop]: _unused /* no alarm */, ...rest } = obj;
+  return rest;
+}
+
+function test2(obj) {
+  const { [123]: _unused /* no alarm */, ...rest } = obj;
+  return rest;
+}

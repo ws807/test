@@ -7,24 +7,18 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-import Vue from 'vue';
+// Tests alarm filtering on ?? operator sub-conditions. (BD-5571)
 
-Vue.component('hello', {
-  props: {
-    foo: String
-  },
-  computed: {
-    foo() { // alarm
-      return this.msg + ' hi';
-    }
-  },
-  methods: {
-    foo() { // alarm
-      // do something
-    }
-  },
-  data() {
-    return { msg: 'myData' };
-  },
-  template: '<div>{{ foo }}</div>'
-});
+function test1() {
+  var x = {};
+  if (x ?? y) { // 2 alarms (no filtering)
+    return x;
+  }
+}
+
+function test2() {
+  var x = {};
+  if ((x ?? y) ?? z) { // 2 alarms (filter alarm on 'x ?? y')
+    return x;
+  }
+}

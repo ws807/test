@@ -1,5 +1,5 @@
 /*******************************************************************************
-    Copyright (c) 2018, S-Core.
+    Copyright (c) 2014, S-Core.
     All rights reserved.
 
     Use is subject to license terms.
@@ -7,11 +7,7 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Testcase for filtering alarms when "@interface" JsDoc. (BD-5589)
+// Test case for non-early syntax error on regular expression.
+// Currently, we do not detect non-early syntax errors. (BD-5641)
 
-function test() {
-  /** @interface */
-  class Foo { // no alarm
-    method() { }
-  }
-}
+var x = /?/g; // no alarm

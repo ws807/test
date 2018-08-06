@@ -7,17 +7,14 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Testcase for no alarm detection on Vue JSX. (BD-5568)
+// Test case for for-await-of side effect. (BD-5609)
 
-import Vue from "vue";
-
-new Vue({
-  el: '#app',
-  render(h) {
-    return (
-      <div>
-        {arr.length && arr} {/* no alarm */}
-      </div>
-    );
+async function test() {
+  if (this.state.ok) {
+    for await (var x of asyncItems) {
+      if (this.state.ok) {
+        foo = x;
+      }
+    }
   }
-});
+}

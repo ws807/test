@@ -7,6 +7,17 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Tests non-trivial computed property in object pattern. (BD-5611)
+// Tests alarm detection on the right most operand of ?? operator. (BD-5572)
 
-var { length: len, [len - 1]: last} = [1, 2, 3];
+import React from "react";
+
+export class Foo extends React.Component {
+  render() {
+    return (
+      <div>
+        {elem ?? arr.length && arr} {/* alarm */}
+        {(elem ?? arr.length) && f(elem, arr)} {/* alarm */}
+      </div>
+    );
+  }
+}

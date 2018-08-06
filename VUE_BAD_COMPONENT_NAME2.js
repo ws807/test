@@ -7,11 +7,23 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Testcases for optional chaining (BD-5565)
+import Vue from 'vue';
 
-x?.y; // alarm
-x?.[y]; // alarm
+Vue.extend({
+  name: '', // no alarm
+  data: function () {
+    return { msg: 'hi' };
+  }
+});
 
-x?.offsetHeight; // no alarm for reflow
+Vue.component('my-comp', { // no alarm
+  data: function () {
+    return { msg: 'hi' };
+  }
+});
 
-(0, x)?.(); // no alarm for indirect call pattern
+Vue.component('', { // alarm
+  data: function () {
+    return { msg: 'hi' };
+  }
+});

@@ -7,7 +7,10 @@
      This distribution may include materials developed by third parties.
 -->
 
+<!-- Testcase for correctly differentiating SYNTAX_ERROR and NON_REFERENCE_LHS. (BD-5657) -->
+
 <template>
-  <div v-test="&quot;str&quot;"></div>
-  <div v-for="(&nbsp;a;) in b"></div> <!-- alarm -->
+  <div>
+    <div v-if="foo;"/> <!-- SYNTAX_ERROR alarm -->
+  </div>
 </template>

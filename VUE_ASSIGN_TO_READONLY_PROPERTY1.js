@@ -7,12 +7,14 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Test case for optional chaining operator. (BD-5470)
+import Vue from 'vue';
 
-function test1(x) {
-  return (a?.b).c; // alarm
-}
+new Vue({
+  el: '#app',
+  mounted() {
+    this.$data = {}; // alarm
+  },
+  template: '<div>Hi</div>'
+});
 
-function test2(x) {
-  return (a?.b)?.c; // no alarm
-}
+Vue.config = {}; // alarm

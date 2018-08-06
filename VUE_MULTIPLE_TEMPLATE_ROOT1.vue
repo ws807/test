@@ -8,6 +8,11 @@
 -->
 
 <template>
-  <div v-test="&quot;str&quot;"></div>
-  <div v-for="a in &nbsp; ;"></div> <!-- alarm -->
+  <div />
+  <div /> <!-- alarm -->
 </template>
+<script>
+export default {
+  name: 'multi-root'
+};
+</script>

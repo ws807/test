@@ -9,30 +9,32 @@
 
 import Vue from 'vue';
 
+var obj = {
+  msg: 'hi'
+};
+
 Vue.component('my-comp', {
-  data: { msg: 'hi' }, // alarm
-  props: [{ abc: String }], // alarm
-  computed: 'computed', // alarm
-  methods: {
-    abc: 'aaa', // alarm
-    def() {}
+  data() {
+    return obj; // alarm
   },
   template: '<div>{{ msg }}</div>'
 });
 
-Vue.component('my-comp', {
-  data() { // no alarm
-    return { msg: 'hi' };
-  },
-  props: ['abc'], // no alarm
-  computed: { // no alarm
-    foo() {
-      return this.abc + 'b';
+Vue.component('my-comp2', {
+  data() {
+    return new Object(obj); // no alarm
+  }
+});
+
+Vue.component('my-comp3', {
+  data() {
+    var obj;
+
+    function foo() {
+      obj = { msg: 'hi' };
     }
-  },
-  methods: {
-    abc() {}, // no alarm
-    def() {}
-  },
-  template: '<div>{{ msg }}</div>'
+    foo();
+
+    return obj; // no alarm
+  }
 });
