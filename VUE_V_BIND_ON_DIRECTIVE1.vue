@@ -9,16 +9,15 @@
 
 <template>
   <div>
-    <div v-if="foo == 1">111</div>
-    <div v-else>222</div>
-    <div v-else>333</div> <!-- alarm -->
-    <div v-else-if="foo == 4">444</div> <!-- alarm -->
+    <div :v-if="foo">Foo</div> <!-- alarm -->
+    <div v-bind:v-if="bar">Bar</div> <!-- alarm -->
+    <comp :v-bind="obj"/> <!-- alarm -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'invalid-v-else1',
-  props: [foo]
+  name: 'v-bind-on-directive1',
+  props: ["foo", "bar", "obj"]
 };
 </script>

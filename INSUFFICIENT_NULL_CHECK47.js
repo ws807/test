@@ -7,17 +7,18 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Tests alarm detection on the right most operand of ?? operator. (BD-5572)
+// Test case for recognizing for-of RHS as property access. (BD-5705)
 
-import React from "react";
-
-export class Foo extends React.Component {
-  render() {
-    return (
-      <div>
-        {elem ?? arr.length && arr} {/* alarm */}
-        {(elem ?? arr.length) && f(elem, arr)} {/* alarm */}
-      </div>
-    );
+function test1(arr) {
+  if (arr /* alarm */) bar(arr);
+  for (let x of arr) {
+    bar(x);
   }
+}
+
+async function test2(arr) {
+  for await (let x of arr) {
+    bar(x);
+  }
+  if (arr /* alarm */) bar(arr);
 }

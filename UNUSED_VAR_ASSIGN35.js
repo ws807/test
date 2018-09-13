@@ -7,14 +7,14 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Testcase for alarm filtering on object rest with computed properties. (BD-5624)
+// Testcase for variable span with Flow type annotation. (BD-5688)
 
-function test1(obj, prop) {
-  const { [prop]: _unused /* no alarm */, ...rest } = obj;
-  return rest;
+function test1() {
+  var x /* alarm */ : number = 123;
 }
 
-function test2(obj) {
-  const { [123]: _unused /* no alarm */, ...rest } = obj;
-  return rest;
+function test2(x /* alarm */ ? : number = 123) {
 }
+
+var test3 = (x /* alarm */ ? : number = 123) => {
+};

@@ -1,0 +1,9 @@
+{
+  "main": "index.js",
+  "foo": {
+    "dependencies": "bar"
+  },
+  "dependencies": {
+    "my-lib": "file:./my-lib"
+  }
+}

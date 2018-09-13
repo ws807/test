@@ -7,14 +7,10 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Test case for for-await-of side effect. (BD-5609)
+// Test case for non-relative module path - local dependency
 
-async function test() {
-  if (this.state.ok) {
-    for await (var x of asyncItems) {
-      if (this.state.ok) {
-        foo = x;
-      }
-    }
-  }
+import {foo} from "my-lib/lib";
+
+function bar() {
+    if (foo() === true) return;
 }

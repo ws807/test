@@ -7,18 +7,17 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Tests alarm filtering on ?? operator sub-conditions. (BD-5571)
+// Test case for Medium impact ConstantConditionChecker alarm on definite RegExp object. (BD-5517)
 
-function test1() {
-  var x = {};
-  if (x ?? y) { // 2 alarms (no filtering)
-    return x;
+function test1(str) {
+  if (/foo/) { // Medium impact alarm
+    console.log("str contains foo.");
   }
 }
 
-function test2() {
-  var x = {};
-  if ((x ?? y) ?? z) { // 2 alarms (filter alarm on 'x ?? y')
-    return x;
+function test2(str) {
+  var re = /foo/;
+  if (re) { // Medium impact alarm
+    console.log("str contains foo.");
   }
 }

@@ -7,23 +7,11 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-import Vue from 'vue';
+// Testcase for not considering let declaration as overwrites
+// Need to check the message
 
-Vue.extend({
-  name: '', // no alarm
-  data: function () {
-    return { msg: 'hi' };
-  }
-});
-
-Vue.component('my-comp', { // no alarm
-  data: function () {
-    return { msg: 'hi' };
-  }
-});
-
-Vue.component('', { // alarm
-  data: function () {
-    return { msg: 'hi' };
-  }
-});
+for (let x1 in obj) { // alarm, no overwrites
+  let x2 = 123; // alarm, no overwrites
+  let x3;
+  x3 = "Hello"; // alarm, previous line is not the overwrite
+}

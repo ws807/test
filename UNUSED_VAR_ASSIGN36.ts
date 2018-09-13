@@ -7,14 +7,14 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-import Vue from 'vue';
+// Testcase for variable span with TypeScript type annotation. (BD-5688)
 
-new Vue({
-  el: '#app',
-  mounted() {
-    this.$data = {}; // alarm
-  },
-  template: '<div>Hi</div>'
-});
+function test1() {
+  var x /* alarm */ : number = 123;
+}
 
-Vue.config = {}; // alarm
+function test2(x /* alarm */ ? : number = 123) {
+}
+
+var test3 = (x /* alarm */ ? : number = 123) => {
+};

@@ -7,17 +7,14 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Tests JSX spread child. (BD-5141)
-// No alarm detection because JSX spread child is not well-established feature.
+// Testcase for detection after pruning undefined/null. (BD-4815)
 
-import React from 'react';
-
-export class Hello extends React.Component {
-  render() {
-    return (
-      <div>
-        { ...[<div key="hello">Hello</div>, <div value="hello">Hi</div>] /* no alarm */ }
-      </div>
-    );
+function test(cond) {
+  var arr;
+  if (cond) {
+    arr = [1, 2, 3, 4, 5];
+  }
+  for (var x in arr /* alarm */) {
+    foo(arr[x]);
   }
 }

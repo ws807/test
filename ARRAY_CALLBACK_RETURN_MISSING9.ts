@@ -1,5 +1,5 @@
 /*******************************************************************************
-    Copyright (c) 2014, S-Core.
+    Copyright (c) 2018, S-Core.
     All rights reserved.
 
     Use is subject to license terms.
@@ -7,7 +7,8 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Test case for non-early syntax error on regular expression.
-// Currently, we do not detect non-early syntax errors. (BD-5641)
+// Testcase for recognizing TypeScript Array<> type annotation. (BD-5710)
 
-var x = /?/g; // no alarm
+function test(arr: Array<number>) {
+  arr.filter(function (n) { n > 0 } /* alarm */);
+}
