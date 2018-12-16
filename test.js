@@ -1469,10 +1469,7 @@ $.fn.dropdown = function(parameters) {
 
                 // down arrow (traverse menu down)
                 if(pressedKey == keys.downArrow) {
-                  $nextItem = (hasSelectedItem && inVisibleMenu)
-                    ? $nextItem = $selectedItem.nextAll(selector.item + ':not(' + selector.unselectable + ')').eq(0)
-                    : $item.eq(0)
-                  ;
+                  $nextItem = (hasSelectedItem && inVisibleMenu) ? $nextItem = $selectedItem.nextAll(selector.item + ':not(' + selector.unselectable + ')').eq(0) : $item.eq(0);
                   if($nextItem.length === 0) {
                     module.verbose('Down key pressed but reached bottom of current menu');
                     event.preventDefault();
