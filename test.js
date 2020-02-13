@@ -1,1 +1,4 @@
-(function test() { "use strict"; return this.prop; })();
+import React from "react";
+import { Foo } from "./foo";
+
+export var elem = <Foo foo={123} />;
