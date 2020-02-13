@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 export class Foo extends React.Component {
   static propTypes = {
-    foo: PropTypes.string.isRequired
+    foo: PropTypes.string.isRequired,
+
+    bar: PropTypes.string.isRequired
   }
 }

@@ -1,4 +1,4 @@
 import React from "react";
 import { Foo } from "./foo";
 
-export var elem = <Foo foo={123} />;
+export var elem = <Foo />;
