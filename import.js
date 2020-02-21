@@ -7,20 +7,19 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-// Basic test case for inter-module detection
+// Test case for 'isRequired' prop
 
-import { GLOBAL_RE1, GLOBAL_RE2, NON_GLOBAL_RE } from "./export";
+import React from 'react';
+import Person from "./export";
 
-export function test1(str) {
-  return GLOBAL_RE1.test(str); // alarm
-}
-
-export function test2(str) {
-  if (GLOBAL_RE2.test(str)) {
-    return str.replace(GLOBAL_RE2, ""); // alarm. "test/replace pattern" filtering is not applied for imported value.
-  }
-}
-
-export function test3(str) {
-  return NON_GLOBAL_RE.test(str); // no alarm
+export function foo1() {
+    const address = {
+        city: "Seoul"
+    };
+    const props = {
+        address: address,
+        contact: {
+        }
+    };
+    return <Person {...props}/>; // alarm: no 'age' and 'address.country' / name has default prop
 }

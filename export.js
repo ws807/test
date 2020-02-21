@@ -7,6 +7,26 @@
     This distribution may include materials developed by third parties.
   ******************************************************************************/
 
-export let GLOBAL_RE1 = /re1/g;
-export let GLOBAL_RE2 = /re2/g;
-export let NON_GLOBAL_RE = /re/;
+// Test case for 'isRequired' prop
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+export default class Person extends React.Component {
+    static propTypes = {
+        name: PropTypes.string.isRequired,
+        age: PropTypes.number.isRequired,
+        address: PropTypes.shape({
+            country: PropTypes.string.isRequired,
+            city: PropTypes.string
+        }),
+        contact: PropTypes.shape({
+            phone: PropTypes.string,
+            email: PropTypes.string
+        }).isRequired
+    }
+}
+
+Person.defaultProps = {
+    name: "Anonymous"
+};
