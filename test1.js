@@ -2,5 +2,6 @@ function foo() {
 }
 
 function bar() {
-  undefined.prop;    
+    var aaa;
+    aaa.prop;
 }
