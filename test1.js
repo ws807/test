@@ -3,5 +3,5 @@ function foo() {
 }
 
 function bar() {
-    null.prop;
+    
 }
