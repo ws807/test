@@ -1,7 +1,6 @@
 function foo() {
-    null.prop;
 }
 
 function bar() {
-    
+  undefined.prop;    
 }
