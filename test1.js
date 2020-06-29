@@ -1,2 +1,7 @@
-null.prop;
-null.prop;
+function foo() {
+    null.prop;
+}
+
+function bar() {
+    null.prop;
+}
