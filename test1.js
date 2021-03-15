@@ -1,1 +1,4 @@
-1 === "1"
+function foo() {
+    var aaa;
+    return null.prop;
+}
