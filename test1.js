@@ -1,4 +1,4 @@
 function foo() {
     var aaa;
-    return null.prop;
+    return aaa.prop;
 }
