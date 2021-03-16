@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.0
 jobs:
   build:
     docker:
@@ -6,7 +8,9 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello world!!"
+      - sonarcloud/scan
 workflows:
   my-workflow:
     jobs:
-      - build
+      - build:
+        context: sonarcloud
