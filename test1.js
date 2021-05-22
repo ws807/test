@@ -1,4 +1,5 @@
-function foo() {
-    var aaa;
-    return aaa.prop;
+import { foo } from "./test2.js";
+
+function test() {
+  foo(1, 2);
 }
