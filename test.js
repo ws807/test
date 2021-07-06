@@ -1,1 +1,1 @@
-null.prop;
+x.prop;
