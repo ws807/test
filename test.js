@@ -1,1 +1,2 @@
 abc.prop;
+null.prop;
