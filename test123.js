@@ -9,3 +9,7 @@ function test2() {
 function test3() {
   return null.prop;
 }
+
+function test4() {
+  return null.prop;
+}
