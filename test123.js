@@ -13,3 +13,7 @@ function test3() {
 function test4() {
   return null.prop;
 }
+
+function test5() {
+  return null.prop;
+}
