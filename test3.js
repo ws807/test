@@ -1,3 +1,3 @@
 function test3() {
-  return 123456;
+  return null.prop;
 }
