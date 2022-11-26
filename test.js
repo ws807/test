@@ -4,5 +4,4 @@ export function test1(x) {
 
 null.prop;
 
-var foo = null;
-foo.prop;
+const prop = doSomething();
