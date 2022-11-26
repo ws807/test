@@ -3,3 +3,5 @@ export function test1(x) {
 }
 
 null.prop;
+
+null.prop2;
