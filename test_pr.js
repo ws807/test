@@ -1,5 +1,3 @@
-export function test1() { }
+import { test1 } from './test';
 
-import foo1 from 'foo1';
-
-import foo2 from 'foo2';
+test1(null);
