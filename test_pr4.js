@@ -1,3 +1,4 @@
 doSomething();
-doSomething2();
+
 import foo from 'foo';
+import foo2 from 'foo2';
