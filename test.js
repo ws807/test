@@ -1,5 +1,8 @@
-import foo from 'foo';
-import foo2 from 'foo';
-import foo3 from 'foo';
+doSomething();
+export function test1(x) {
+  return x.prop;
+}
 
 null.prop;
+
+const prop = doSomething();
