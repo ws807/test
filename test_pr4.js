@@ -1,6 +1,5 @@
 doSomething();
 
-import bar from 'bar';
 import foo from 'foo';
 import foo2 from 'foo2';
 
