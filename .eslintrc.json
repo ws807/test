@@ -1,4 +1,7 @@
 {
   "extends": ["eslint:recommended"],
-  "plugins": ["astro"]
+  "plugins": ["astro"],
+  "rules": {
+    "astro/no-conflict-set-directives": "error"
+  }
 }
