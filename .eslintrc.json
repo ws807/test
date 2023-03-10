@@ -3,6 +3,7 @@
   "plugins": ["astro", "ttt"],
   "rules": {
     "astro/ttt": "error",
-    "ttt/aaa": "error"
+    "ttt/aaa": "error",
+    "no-constant-condition": "error"
   }
 }
