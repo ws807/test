@@ -1,6 +1,6 @@
 {
   "extends": ["eslint:recommended"],
-  "plugins": ["astro", "ttt"],
+  "plugins": ["astro", "ttt", "html"],
   "rules": {
     "astro/ttt": "error",
     "ttt/aaa": "error",
