@@ -4,6 +4,6 @@
   "rules": {
     "astro/ttt": "error",
     "ttt/aaa": "error",
-    "no-constant-condition": "error"
+    "no-constant-condition": "warning"
   }
 }
