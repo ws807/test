@@ -1,9 +1,6 @@
 {
   "extends": ["eslint:recommended"],
-  "plugins": ["astro", "ttt", "html"],
   "rules": {
-    "astro/ttt": "error",
-    "ttt/aaa": "error",
-    "no-constant-condition": "warn"
+    "no-unused-vars": "error"
   }
 }
