@@ -1,6 +1,6 @@
 import aaa from 'aaa';
 
-function doSomething(foo) {
+export function doSomething(foo) {
   const aaa = foo;
   return null.prop333;
 }
