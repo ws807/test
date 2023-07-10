@@ -1,6 +1,5 @@
-import aaa from 'aaa';
-
-export function doSomething(foo) {
+function doSomething(foo) {
   const aaa = foo;
-  return null.prop333;
+  aaa = 456;
+  return aaa;
 }
