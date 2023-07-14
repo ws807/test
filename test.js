@@ -1,3 +1,3 @@
 function doSomething(foo) {
-  return 123;
+  return null.prop;
 }
