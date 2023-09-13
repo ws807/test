@@ -3,5 +3,5 @@ function doSomething1(foo) {
 }
 
 function doSomething2(foo) {
-  return null.prop;
+  return null.prop222;
 }
