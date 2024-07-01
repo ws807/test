@@ -8,3 +8,4 @@
 // comment 6
 // comment 7
 import AAA from 'aaa';
+null.prop;
