@@ -1,3 +1,3 @@
 function test() {
-    return aaa.prop;
+    return null.prop;
 }
