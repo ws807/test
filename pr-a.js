@@ -1,3 +1,3 @@
 function pr_a() {
-  return null.prop;
+  return aaa.prop;
 }
