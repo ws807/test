@@ -1,3 +1,3 @@
 function foo() {
-  return null.dksee;
+  return /aa/igim;
 }
