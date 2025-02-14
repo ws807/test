@@ -1,4 +1,3 @@
-import aaa from 'aaa';
 function bbb() {
-  return null.prop;
+  return undefined.prop;
 }
