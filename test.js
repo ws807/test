@@ -1,3 +1,3 @@
 function test() {
-  (foo?.prop).bar;
+  return null();
 }
