@@ -1,4 +1,4 @@
 import React from 'react';
 function foo() {
-  return;
+  return null.prop;
 }  
