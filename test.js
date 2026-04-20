@@ -1,4 +1,4 @@
 import aaa from 'aaa';
 function foo() {
-  null.prop
+  null.prop2
 }  
