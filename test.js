@@ -1,12 +1,4 @@
 import aaa from 'aaa';
-import bbb from 'bbb';
-import ccc from 'ccc';
-import ddd from 'ddd';
-import eee from 'eee';
-import fff from 'fff';
-import ggg from 'ggg';
-import hhh from 'hhh';
-import iii from 'iii';
 
 function test() {
 }
