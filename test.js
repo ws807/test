@@ -6,6 +6,7 @@ import eee from 'eee';
 import fff from 'fff';
 import ggg from 'ggg';
 import hhh from 'hhh';
+import iii from 'iii';
 
 function test() {
 }
