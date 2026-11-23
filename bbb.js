@@ -1,3 +1,2 @@
 function bbb() {
-  null()
 }
